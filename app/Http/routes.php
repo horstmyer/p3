@@ -12,14 +12,15 @@
 */
 
 Route::get('/', function () {
-  return view('welcome');
+  return view('layouts.master');
+  });
+Route::get('post/create', 'PostController@create');
+Route::post('post', 'PostController@post');
 
-});
-
-
-
+/*
 Route::get('/lorem/create', 'LoremController@getCreate');
 Route::post('/lorem/create', 'LoremController@postCreate');
 //Route::post('/lorem/create/{number}' , 'LoremController@postCreate');
 Route::get('/dummy/create' , 'DummyController@getCreate');
 Route::post('/dummy/create' , 'DummyController@postCreate');
+*/
